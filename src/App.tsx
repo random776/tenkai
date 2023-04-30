@@ -59,7 +59,7 @@ function App() {
           <MathComponent tex={String.raw`(x + ${-number})x`}></MathComponent>
         )}
         {number === 0 && number2 > 0 && (
-          <MathComponent tex={String.raw`x(x + ${-number2})`}></MathComponent>
+          <MathComponent tex={String.raw`x(x - ${number2})`}></MathComponent>
         )}
 
         <button
@@ -700,7 +700,7 @@ function App() {
             <MathComponent tex={String.raw`(x + ${-number})x`}></MathComponent>
           )}
           {number === 0 && number2 > 0 && (
-            <MathComponent tex={String.raw`x(x + ${-number2})`}></MathComponent>
+            <MathComponent tex={String.raw`x(x - ${number2})`}></MathComponent>
           )}
           {/*  */}
           {number + number2 === 0 && number * number2 === 0 && (
