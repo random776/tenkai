@@ -719,7 +719,7 @@ function App() {
           新しい問題
         </button>
       </div>
-      <p style={{margin: 10}}> ＊ このサイトの制作者へのお問い合わせは<a href="https://random776.github.io/kacchan-uts2-22/contact.html" className="btn4">こちら</a>から。</p>
+      <p style={{margin: 10}}> ＊ このサイトの制作者「かっちゃん」へのお問い合わせは<a href="https://random776.github.io/kacchan-uts2-22/contact.html" className="btn4">こちら</a>から。</p>
     </>
   );
 }
