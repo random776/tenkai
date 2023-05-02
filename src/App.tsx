@@ -63,18 +63,31 @@ function App() {
         )}
         {/*  */}
         {number + number2 === 0 && number * number2 === 0 && (
-            <MathComponent tex={String.raw`x^2`}></MathComponent>
+          <MathComponent tex={String.raw`x^2`}></MathComponent>
         )}
 
-        <button
-          type="button"
-          key={"answer"}
-          onClick={() => {
-            setVisible(true);
-          }}
-        >
-          答え合わせ
-        </button>
+        {visible === false && (
+          <button
+            type="button"
+            key={"answer"}
+            onClick={() => {
+              setVisible(true);
+            }}
+          >
+            答え合わせ
+          </button>
+        )}
+        {visible === true && (
+          <button
+            type="button"
+            key={"answer"}
+            onClick={() => {
+              setVisible(false);
+            }}
+          >
+            答え合わせ
+          </button>
+        )}
         <div style={{ visibility: visible ? "visible" : "hidden" }}>
           <p>答え</p>
           {number > 0 &&
@@ -662,15 +675,28 @@ function App() {
           <MathComponent tex={String.raw`x^2`}></MathComponent>
         )}
 
-        <button
-          type="button"
-          key={"answer"}
-          onClick={() => {
-            setVisible(true);
-          }}
-        >
-          答え合わせ
-        </button>
+        {visible === false && (
+          <button
+            type="button"
+            key={"answer"}
+            onClick={() => {
+              setVisible(true);
+            }}
+          >
+            答え合わせ
+          </button>
+        )}
+        {visible === true && (
+          <button
+            type="button"
+            key={"answer"}
+            onClick={() => {
+              setVisible(false);
+            }}
+          >
+            答え合わせ
+          </button>
+        )}
         <div style={{ visibility: visible ? "visible" : "hidden" }}>
           <p>答え</p>
           {number > 0 && number2 > 0 && (
@@ -723,7 +749,17 @@ function App() {
           新しい問題
         </button>
       </div>
-      <p style={{margin: 10}}> ＊ このサイトの制作者「かっちゃん」へのお問い合わせは<a href="https://random776.github.io/kacchan-uts2-22/contact.html" className="btn4">こちら</a>から。</p>
+      <p style={{ margin: 10 }}>
+        {" "}
+        ＊ このサイトの制作者「かっちゃん」へのお問い合わせは
+        <a
+          href="https://random776.github.io/kacchan-uts2-22/contact.html"
+          className="btn4"
+        >
+          こちら
+        </a>
+        から。
+      </p>
     </>
   );
 }
